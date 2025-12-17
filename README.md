@@ -60,6 +60,12 @@ ng test ngx-feature-flag-guard
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## Latest Releases
+
+[![npm version](https://img.shields.io/npm/v/ngx-feature-flag-guard)](https://www.npmjs.com/package/ngx-feature-flag-guard)
+[![GitHub release](https://img.shields.io/github/v/release/pavan-98/ngx-feature-flags)](https://github.com/pavan-98/ngx-feature-flags/releases)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
