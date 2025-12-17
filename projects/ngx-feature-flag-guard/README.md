@@ -29,7 +29,7 @@ npm install ngx-feature-flag-guard
 
 ```ts
 export const FEATURE_FLAGS = {
-  riskScoreV2: false,
+  experimentalFeature: false,
   newDashboard: false,
 } as const;
 ```
@@ -70,8 +70,8 @@ export class AppModule { }
 ### 3. Structural Directive
 
 ```html
-<div *featureFlag="'riskScoreV2'">
-  New Risk Score UI
+<div *featureFlag="'experimentalFeature'">
+  New Experimental UI
 </div>
 ```
 
@@ -95,7 +95,7 @@ const routes: Routes = [
 
 ```ts
 constructor(private featureFlagService: FeatureFlagService) {
-  if (this.featureFlagService.isEnabled('riskScoreV2')) {
+  if (this.featureFlagService.isEnabled('experimentalFeature')) {
     // ...
   }
 }
@@ -106,7 +106,7 @@ constructor(private featureFlagService: FeatureFlagService) {
 Enable local overrides in non-production environments to allow manual testing:
 
 ```ts
-localStorage.setItem('ff.riskScoreV2', 'true');
+localStorage.setItem('ff.experimentalFeature', 'true');
 ```
 
 ## License
