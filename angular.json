@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-feature-flag-guard": {
+      "projectType": "library",
+      "root": "projects/ngx-feature-flag-guard",
+      "sourceRoot": "projects/ngx-feature-flag-guard/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-feature-flag-guard/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-feature-flag-guard/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/ngx-feature-flag-guard/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  }
+}
